@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="ico/projects.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Проекты - Планировщик</title>
+    </head>
+    <body>
+        <header>
+            <div id="burgerMenu" class="burger-menu" onclick="toggleSidebar()">
+                &#9776;
+            </div>
+
+            <!-- Панель навигации для больших экранов -->
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li class="active"><a href="projects.html">Проекты</a></li>
+                    <li><a href="tasks.html">Список задач</a></li>
+                    <li><a href="about_app.html">О приложении</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div
+            id="sidebarOverlay"
+            class="sidebar-overlay"
+            onclick="closeSidebar()"
+        >
+            <div id="sidebar" class="sidebar">
+                <button class="close-btn" onclick="closeSidebar()">
+                    Назад
+                </button>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li class="active"><a href="projects.html">Проекты</a></li>
+                    <li><a href="tasks.html">Список задач</a></li>
+                    <li><a href="about_app.html">О приложении</a></li>
+                </ul>
+            </div>
+        </div>
+        <main>
+            <div class="projects-main-content">
+                <div class="error-container">
+                    <h1>Ошибка 404</h1>
+                    <p>Страница не найдена.</p>
+                    <img
+                        src="images/projects.svg"
+                        alt="Ошибка 404"
+                        class="error-image"
+                    />
+                </div>
+            </div>
+        </main>
+        <script src="bundle.js"></script>
+        <script src="scripts/toggleSidebar.js"></script>
+    </body>
+</html>
