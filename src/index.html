@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="ico/main.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Главная - Планировщик</title>
+    </head>
+    <body>
+        <header>
+            <div id="burgerMenu" class="burger-menu" onclick="toggleSidebar()">
+                &#9776;
+            </div>
+
+            <!-- Панель навигации для больших экранов -->
+            <nav class="navbar">
+                <ul>
+                    <li class="active"><a href="index.html">Главная</a></li>
+                    <li><a href="projects.html">Проекты</a></li>
+                    <li><a href="tasks.html">Список задач</a></li>
+                    <li><a href="about_app.html">О приложении</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div
+            id="sidebarOverlay"
+            class="sidebar-overlay"
+            onclick="closeSidebar()"
+        >
+            <div id="sidebar" class="sidebar">
+                <button class="close-btn" onclick="closeSidebar()">
+                    Назад
+                </button>
+                <ul>
+                    <li class="active"><a href="index.html">Главная</a></li>
+                    <li><a href="projects.html">Проекты</a></li>
+                    <li><a href="tasks.html">Список задач</a></li>
+                    <li><a href="about_app.html">О приложении</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <main>
+            <div class="main-content">
+                <div class="text-container">
+                    <div class="logo-container">
+                        <img
+                            src="images/main_icon.png"
+                            alt="Логотип приложения"
+                            class="logo"
+                        />
+                    </div>
+                    <h1>Добро пожаловать в Планировщик</h1>
+                    <p>Это приложение помогает вам управлять задачами.</p>
+                </div>
+                <div class="image-container">
+                    <img
+                        src="images/main_image.svg"
+                        alt="Иллюстрация"
+                        class="main-image"
+                    />
+                </div>
+            </div>
+        </main>
+        <script src="bundle.js"></script>
+        <script src="scripts/toggleSidebar.js"></script>
+
+        <!-- <main>
+            <div class="main-content">
+                <img src="image/icon_logo.png" alt="Логотип приложения" class="logo">
+                <h1>Добро пожаловать в Мое Приложение</h1>
+                <p>Это приложение помогает вам управлять задачами. Создавайте, отслеживайте и завершайте задачи легко!</p>
+                <img src="illustration.svg" alt="Иллюстрация" class="main-image">
+            </div>
+        </main> -->
+    </body>
+</html>
