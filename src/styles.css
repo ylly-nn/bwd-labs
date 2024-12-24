@@ -1,252 +1,10 @@
 /* Общие стили страницы */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom right, #f5fcf5, #eefaee);
     background-attachment: fixed;
-}
-
-.burger-menu {
-    display: none;
-    font-size: 30px;
-    color: #333;
-    cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
-/* Сайдбар */
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    overflow-x: hidden;
-    transition: 0.3s;
-    padding-top: 60px;
-}
-
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-    transition: background-color 0.3s;
-}
-
-.sidebar ul li a:hover {
-    background-color: #575757; /* Цвет при наведении */
-}
-
-.sidebar ul li.active a {
-    background-color: #4caf50; /* Цвет активного пункта */
-    pointer-events: none; /* Отключить кликабельность */
-}
-
-.sidebar a:hover {
-    background-color: #575757;
-}
-
-.sidebar .close-btn {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
-    color: white;
-    background-color: #555;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.sidebar .close-btn:hover {
-    background-color: #777;
-}
-/* Стили для задач */
-.task {
-    background-color: #fff8a0;
-    border: 1px solid #f1c232;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-.task {
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#newTasks .task {
-    background-color: #d0e8ff;
-    border-left: 5px solid #0066cc;
-}
-
-#inProgressTasks .task {
-    background-color: #c8e6c9;
-    border-left: 5px solid #388e3c;
-}
-
-#completedTasks .task {
-    background-color: #aedddb;
-    border-left: 5px solid #006d61;
-}
-
-.task button {
-    background-color: #f3c957;
-    border: none;
-    color: #4a4a4a;
-    padding: 8px 20px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    font-weight: 600;
-}
-
-.task button:hover {
-    background-color: #e8b400;
-    color: white;
-}
-
-/* Стили для кнопок */
-.button-container button {
-    margin-left: 5px;
-    padding: 5px 10px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.delete {
-    background-color: #ff6347;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.delete:hover {
-    background-color: #d32f2f;
-}
-
-button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-/* Стили для диалогового окна */
-dialog {
-    width: 450px;
-    padding: 25px;
-    border-radius: 12px;
-    background: linear-gradient(145deg, #ffffff, #f1f1f1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 9999;
-    border: none;
-    transform: scale(0.9);
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-dialog[open] {
-    opacity: 1;
-    transform: scale(1);
-}
-
-dialog::backdrop {
-    background: rgba(0, 0, 0, 0.5);
-    transition: background 0.3s ease;
-}
-
-dialog h1 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-    font-weight: 600;
-    text-align: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 10px;
-}
-
-form input {
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-form input:focus {
-    border-color: #4caf50;
-}
-
-form button {
-    padding: 12px;
-    font-size: 16px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-form button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-form button:active {
-    transform: scale(1);
-}
-
-#closeDialogBtn {
-    padding: 10px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 20px;
-}
-
-#closeDialogBtn:hover {
-    background-color: #e53935;
-    transform: scale(1.05);
-}
-
-#closeDialogBtn:active {
-    transform: scale(1);
 }
 
 /* Стили для navbar */
@@ -295,6 +53,17 @@ form button:active {
     color: #1b341b;
     pointer-events: none;
     transform: none;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 /* Основное содержание */
@@ -366,124 +135,17 @@ p {
     margin-top: 20px;
 }
 
-/* Стили для канбан-доски */
-.kanban-board {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: #f7f7f7;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.kanban-board th {
-    padding: 15px;
-    text-align: center;
-    border: 1px solid #d1d1d1;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.kanban-board th:nth-child(1) {
-    background-color: #6fa3ab;
-}
-
-.kanban-board th:nth-child(2) {
-    background-color: #8ebf8e;
-}
-
-.kanban-board th:nth-child(3) {
-    background-color: #f5a8c1;
-}
-
-.kanban-board td {
-    width: 33%;
-    vertical-align: top;
-    padding: 10px;
-    border: 1px solid #e0e0e0;
-    background-color: #fafafa;
-}
-
-.task-column {
-    text-align: center;
-}
-
-.task-column .column-header {
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
-}
-
-.task-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #ffffff;
-    border-radius: 10px;
-}
-
-/* Дополнительные стили для задач */
-.task {
-    background-color: #fffc9e;
-    border: 1px solid #fdd835;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-.task .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.task .button-container button {
-    background-color: #007bff;
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.task .button-container button.delete {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.task .button-container button.delete:hover {
-    background-color: #f1b0b7;
-    color: #491217;
-}
-
-.task .button-container button:hover {
-    opacity: 0.8;
-}
-
-#openDialogBtn {
-    font-size: 18px; /* Устанавливает размер текста на кнопке */
-    padding: 10px 20px; /* Устанавливает внутренние отступы для увеличения кнопки */
-    background-color: #4caf50; /* Цвет фона */
-    color: white; /* Цвет текста */
-    border: none; /* Убирает рамку */
-    border-radius: 5px; /* Округляет углы */
-    cursor: pointer; /* Показывает курсор в виде руки */
-    transition: background-color 0.3s; /* Плавный переход для изменения цвета */
-}
-
-#openDialogBtn:hover {
-    background-color: #45a049; /* Изменяет цвет фона при наведении */
-}
 /* Стили для мобильных устройств */
-@media (max-width: 600px) {
+@media (max-width: 730px) {
+    .search-container {
+        max-width: 100%; /* Контейнер растягивается на всю ширину экрана */
+        padding: 20px; /* Меньшие отступы */
+        margin: 20px; /* Отступы со всех сторон */
+    }
+
+    #searchInput {
+        font-size: 16px; /* Уменьшаем размер шрифта */
+    }
     .navbar {
         display: none; /* скрыть меню на мобильных устройствах */
     }
@@ -520,12 +182,21 @@ p {
 
     #openDialogBtn {
         font-size: 16px;
-        padding: 8px 16px;
+        padding: 10px 20px;
+        margin-top: 100 px;
     }
 }
 
 /* Стили для планшетов */
-@media (max-width: 1024px) and (min-width: 601px) {
+@media (max-width: 1024px) and (min-width: 730px) {
+    .search-container {
+        max-width: 500px; /* Средняя ширина контейнера */
+        padding: 30px; /* Умеренные отступы */
+    }
+
+    #searchInput {
+        font-size: 17px; /* Умеренный размер шрифта */
+    }
     .navbar {
         flex-direction: row;
         justify-content: space-around;
@@ -543,8 +214,16 @@ p {
     }
 }
 
-/* Стили для больших экранов (например, десктопы) */
 @media (min-width: 1025px) {
+    .search-container {
+        max-width: 600px; /* Увеличиваем максимальную ширину */
+        padding: 40px; /* Добавляем больше внутренних отступов */
+        margin: 40px auto; /* Отступ сверху и снизу */
+    }
+
+    #searchInput {
+        font-size: 18px; /* Увеличиваем размер шрифта */
+    }
     .navbar {
         flex-direction: row;
         justify-content: space-between;
@@ -560,5 +239,6 @@ p {
     #openDialogBtn {
         font-size: 20px;
         padding: 12px 24px;
+        margin-top: 100 px;
     }
 }

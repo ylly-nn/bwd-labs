@@ -1,0 +1,49 @@
+/* Сайдбар */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757; /* Цвет при наведении */
+}
+
+.sidebar ul li.active a {
+    background-color: #4caf50; /* Цвет активного пункта */
+    pointer-events: none; /* Отключить кликабельность */
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.sidebar .close-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    color: white;
+    background-color: #555;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sidebar .close-btn:hover {
+    background-color: #777;
+}

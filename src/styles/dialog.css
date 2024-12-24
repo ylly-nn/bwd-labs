@@ -1,0 +1,110 @@
+#openDialogBtn {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 60px auto;
+    font-size: 18px; /* Устанавливает размер текста на кнопке */
+    padding: 10px 20px; /* Устанавливает внутренние отступы для увеличения кнопки */
+    background-color: #4caf50; /* Цвет фона */
+    color: white; /* Цвет текста */
+    border: none; /* Убирает рамку */
+    border-radius: 5px; /* Округляет углы */
+    cursor: pointer; /* Показывает курсор в виде руки */
+    transition: background-color 0.3s; /* Плавный переход для изменения цвета */
+}
+
+#openDialogBtn:hover {
+    background-color: #45a049; /* Изменяет цвет фона при наведении */
+}
+/* Стили для диалогового окна */
+dialog {
+    width: 450px;
+    padding: 25px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #ffffff, #f1f1f1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 9999;
+    border: none;
+    transform: scale(0.9);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+dialog[open] {
+    opacity: 1;
+    transform: scale(1);
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease;
+}
+
+dialog h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+}
+
+form input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #4caf50;
+}
+
+form button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+form button:active {
+    transform: scale(1);
+}
+
+#closeDialogBtn {
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+#closeDialogBtn:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+#closeDialogBtn:active {
+    transform: scale(1);
+}

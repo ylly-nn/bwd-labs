@@ -1,0 +1,228 @@
+/* Стили для задач */
+.task {
+    background-color: #fff8a0;
+    border: 1px solid #f1c232;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.task {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#newTasks .task {
+    background-color: #d0e8ff;
+    border-left: 5px solid #0066cc;
+}
+
+#inProgressTasks .task {
+    background-color: #c8e6c9;
+    border-left: 5px solid #388e3c;
+}
+
+#completedTasks .task {
+    background-color: #aedddb;
+    border-left: 5px solid #006d61;
+}
+
+.task button {
+    background-color: #f3c957;
+    border: none;
+    color: #4a4a4a;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.task button:hover {
+    background-color: #e8b400;
+    color: white;
+}
+
+/* Стили для кнопок */
+.button-container button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.delete {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.delete:hover {
+    background-color: #d32f2f;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Стили для канбан-доски */
+.kanban-board {
+    width: 80%;
+    margin: 0px auto;
+    border-collapse: collapse;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.kanban-board th {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #d1d1d1;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.kanban-board th:nth-child(1) {
+    background-color: #6fa3ab;
+}
+
+.kanban-board th:nth-child(2) {
+    background-color: #8ebf8e;
+}
+
+.kanban-board th:nth-child(3) {
+    background-color: #f5a8c1;
+}
+
+.kanban-board td {
+    width: 33%;
+    vertical-align: top;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    background-color: #fafafa;
+}
+
+.task-column {
+    text-align: center;
+}
+
+.task-column .column-header {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.task-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Дополнительные стили для задач */
+.task {
+    background-color: #fffc9e;
+    border: 1px solid #fdd835;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.task .button-container button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.task .button-container button.delete {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.task .button-container button.delete:hover {
+    background-color: #f1b0b7;
+    color: #491217;
+}
+
+.task .button-container button:hover {
+    opacity: 0.8;
+}
+
+/* Стили для контейнера поиска */
+.search-container {
+    display: flex; /* Для выравнивания элементов по горизонтали */
+    flex-direction: column; /* Метка и поле ввода будут располагаться вертикально */
+    align-items: center; /* Выравнивание по центру по горизонтали */
+    justify-content: center; /* Выравнивание по центру по вертикали */
+    padding: 20px; /* Добавление отступов вокруг элемента */
+    margin: 30px auto; /* Центрируем контейнер по горизонтали */
+    max-width: 500px; /* Максимальная ширина контейнера */
+    background-color: #ffffff; /* Белый фон для контрольно-выводного блока */
+    border-radius: 8px; /* Округление углов контейнера */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для визуального отделения */
+}
+
+/* Стили для метки (label) */
+.search-container label {
+    font-size: 18px; /* Размер шрифта для метки */
+    color: #333; /* Цвет текста */
+    margin-bottom: 10px; /* Отступ снизу от метки до поля ввода */
+}
+
+/* Стили для поля ввода */
+#searchInput {
+    padding: 10px; /* Внутренние отступы для поля ввода */
+    width: 100%; /* Поле ввода растягивается на всю ширину контейнера */
+    font-size: 16px; /* Размер шрифта в поле ввода */
+    border: 1px solid #ccc; /* Цвет границы поля ввода */
+    border-radius: 8px; /* Округление углов поля ввода */
+    outline: none; /* Убираем контур при фокусе */
+    transition: border-color 0.3s ease; /* Плавный переход для изменения границы */
+}
+
+/* Стили для поля ввода при фокусе */
+#searchInput:focus {
+    border-color: #4caf50; /* Цвет границы при фокусе */
+}
